@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Countdown Timer</title>
+    <style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: linear-gradient(135deg, #1b1b1b, #0e0e0e);
+    color: #eaeaea;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(12px);       
+    padding: 30px;
+    width: 330px;
+    border-radius: 16px;
+    text-align: center;
+
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+}
+h2 {
+    margin-bottom: 15px;
+    color: #ffffff;
+    font-weight: 600;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    border-radius: 10px;
+    outline: none;
+    border: 1px solid #3a3a3a;
+    background: #1f1f1f;
+    color: #fff;
+    margin-bottom: 20px;
+    font-size: 16px;
+    transition: 0.25s;
+}
+
+input:focus {
+    border-color: #00d0ff;
+    box-shadow: 0 0 8px rgba(0, 208, 255, 0.4);
+}
+
+#startBtn {
+    width: 100%;
+    padding: 12px;
+    background: #00baff;
+    border: none;
+    border-radius: 10px;
+    color: #0d0d0d;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.25s;
+}
+
+#startBtn:hover {
+    background: #0096cc;
+    box-shadow: 0 0 10px rgba(0, 186, 255, 0.6);
+}
+
+#timeDisplay {
+    margin-top: 25px;
+    font-size: 30px;
+    font-weight: bold;
+    color: #00eaff;
+    text-shadow: 0 0 10px rgba(0, 234, 255, 0.6);
+}
+
+#progressBarContainer {
+    width: 100%;
+    height: 10px;
+    background: #333;
+    border-radius: 10px;
+    margin-top: 20px;
+    overflow: hidden;
+}
+
+#progressBar {
+    height: 100%;
+    width: 0%;
+    background: linear-gradient(90deg, #00eaff, #0099ff);
+    transition: width 1s linear;
+}
+
+    </style>
+</head>
+<body>
+
+    <h2>⏳ Easy Countdown Timer</h2>
+
+    <input type="number" id="secondsInput" placeholder="Enter seconds">
+    <button id="startBtn">Start</button>
+
+    <div id="timeDisplay"></div>
+
+    <audio id="beepSound">
+        <source src="https://actions.google.com/sounds/v1/alarms/beep_short.ogg" type="audio/ogg">
+    </audio>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
